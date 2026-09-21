@@ -1,0 +1,388 @@
+/* ===============================
+   STYLES DU SITE PUBLIC
+   (catalogue + fiche d'un voyage)
+   À charger après dashboard.css
+   =============================== */
+
+.texte-doux {
+  color: #b8b8b8;
+}
+
+/* --- Boutons d'action --- */
+.btn-cta {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #0b5ed7;
+  color: #fff;
+}
+.btn-cta:disabled {
+  background-color: #3b4a63;
+  color: #cbd5e1;
+}
+
+/* --- Carte du catalogue --- */
+.card.carte-catalogue {
+  height: 700px;
+}
+.carte-catalogue .card-title a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.carte-catalogue .card-title a:hover {
+  text-decoration: underline;
+}
+.carte-catalogue .prix-carte {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+.carte-catalogue .prix-carte small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #b8b8b8;
+}
+.carte-catalogue .infos-carte {
+  font-size: 0.8rem;
+  color: #b8b8b8;
+}
+.badge-complet {
+  background: #5a2a2a;
+  color: #ffd6d6;
+  font-weight: 600;
+}
+
+/* --- Fiche d'un voyage --- */
+.fiche h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.fiche-galerie-principale {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: zoom-in;
+  background: #1e1e1e;
+}
+.fiche-miniatures {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.fiche-miniatures button {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.fiche-miniatures button:focus-visible,
+.fiche-galerie-principale:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+.fiche-miniatures button.active {
+  border-color: #0d6efd;
+}
+.fiche-miniatures img {
+  display: block;
+  width: 96px;
+  height: 64px;
+  object-fit: cover;
+}
+.fiche-prix {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.fiche-prix small {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #b8b8b8;
+}
+.fiche-infos {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.fiche-infos li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #2c2c2c;
+}
+.fiche-infos li span:first-child {
+  color: #b8b8b8;
+}
+.fiche-description {
+  white-space: pre-line;
+  line-height: 1.7;
+}
+
+/* Formulaire de devis : la règle générale .card impose une hauteur fixe */
+.card.carte-devis {
+  height: auto;
+  overflow: visible;
+}
+.carte-devis label {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 0.25rem;
+}
+.carte-devis .form-text,
+.carte-devis .mention {
+  color: #b8b8b8;
+  font-size: 0.78rem;
+}
+
+/* Champ invisible pour les humains, destiné à piéger les robots */
+.champ-piege {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* --- Lightbox (visionneuse plein écran) --- */
+#lightbox .modal-content {
+  background: transparent;
+  border: none;
+}
+#lightbox .carousel-item img {
+  max-height: 85vh;
+  width: 100%;
+  object-fit: contain;
+}
+#lightbox .btn-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  z-index: 5;
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+/* --- Sélecteur de langue (barre de navigation) --- */
+.lang-switch {
+  display: inline-flex;
+  gap: 4px;
+}
+.lang-switch a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+}
+.lang-switch a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.lang-switch a.active {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+}
+
+/* --- Filtres --- */
+.lien-reinit {
+  color: #7db4ff;
+  text-decoration: underline;
+}
+.lien-reinit:hover {
+  color: #fff;
+}
+
+/* --- Crédits photo et pied de page --- */
+.credits-photos {
+  font-size: 0.8rem;
+  color: #b8b8b8;
+}
+.credits-photos summary {
+  cursor: pointer;
+}
+.credits-photos ul {
+  margin: 0.5rem 0;
+  padding-left: 1.1rem;
+}
+.credits-photos a {
+  color: #7db4ff;
+}
+.pied-public {
+  border-top: 1px solid #2c2c2c;
+}
+
+/* --- Description des cartes : 3 lignes maximum (au lieu d'une coupure en milieu de ligne) --- */
+.carte-catalogue .card-description-wrapper {
+  max-height: none;
+}
+.carte-catalogue .description-courte {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.carte-catalogue .card-description-wrapper.expanded {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.carte-catalogue .card-description-wrapper.expanded .description-courte {
+  display: block;
+  overflow: visible;
+}
+
+/* --- Étoiles : affichage d'une note --- */
+.etoiles-affichage {
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+.etoiles-affichage .pleine {
+  color: #f5b301;
+}
+.etoiles-affichage .vide {
+  color: #555;
+}
+.note-carte {
+  color: #f5b301;
+  font-weight: 600;
+}
+.lien-note {
+  color: inherit;
+  text-decoration: none;
+}
+.lien-note:hover strong {
+  text-decoration: underline;
+}
+
+/* --- Étoiles : saisie d'une note (boutons radio, du plus haut au plus bas dans le HTML) --- */
+.etoiles {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.etoiles input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.etoiles label {
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0 3px;
+  color: #555;
+}
+.etoiles input:checked ~ label,
+.etoiles label:hover,
+.etoiles label:hover ~ label {
+  color: #f5b301;
+}
+.etoiles input:focus-visible + label {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.etiquette-legende {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 0.25rem;
+  float: none;
+  width: auto;
+}
+
+/* --- Liste des avis --- */
+.liste-avis li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+/* --- Pages de texte (à propos, mentions légales, confidentialité) --- */
+.page-texte h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.page-texte .container {
+  max-width: 900px;
+}
+.page-texte .lead {
+  color: #d8d8d8;
+}
+.section-texte {
+  margin-top: 2rem;
+}
+.section-texte p,
+.section-texte li {
+  line-height: 1.7;
+}
+.section-texte a,
+.page-texte a:not(.btn) {
+  color: #7db4ff;
+}
+.section-texte .table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #f1f1f1;
+  --bs-table-border-color: #3a3a3a;
+}
+.pilier {
+  background: #1e1e1e;
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
+  padding: 1.1rem;
+}
+.etapes {
+  padding-left: 1.2rem;
+}
+.etapes li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+.texte-etroit {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.encadre-demo {
+  background: #22303f;
+  border: 1px solid #2f4a66;
+  color: #d4e6ff;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* --- Pied de page --- */
+.liens-pied li {
+  margin-bottom: 0.35rem;
+}
+.liens-pied a,
+.pied-public label a {
+  color: #7db4ff;
+}
+.pied-public .form-control {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+}
+.pied-public .form-check-input {
+  background-color: #2b2b2b;
+  border-color: #666;
+}
+.pied-public .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}

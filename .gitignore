@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Futurs secrets (identifiants BD, clés API, etc.)
+.env
+.env.*
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Réglages locaux (identité légale de l'exploitant, etc.)
+includes/config.local.php
